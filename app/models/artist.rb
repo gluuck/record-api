@@ -1,3 +1,5 @@
 class Artist < ApplicationRecord
-  belongs_to :user
+  has_many  :reecords, dependent: :destroy
+  validates :name, presence: true
+  # belongs_to :user
 end
